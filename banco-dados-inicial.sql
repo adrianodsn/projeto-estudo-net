@@ -29,17 +29,8 @@ CREATE TABLE `cidades` (
   PRIMARY KEY (`Id`),
   KEY `fk_cidades_EstadoId_idx` (`EstadoId`),
   CONSTRAINT `fk_cidades_EstadoId` FOREIGN KEY (`EstadoId`) REFERENCES `estados` (`Id`) ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `cidades`
---
-
-LOCK TABLES `cidades` WRITE;
-/*!40000 ALTER TABLE `cidades` DISABLE KEYS */;
-/*!40000 ALTER TABLE `cidades` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `estados`
@@ -53,17 +44,8 @@ CREATE TABLE `estados` (
   `Nome` varchar(50) NOT NULL,
   `Sigla` varchar(2) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `estados`
---
-
-LOCK TABLES `estados` WRITE;
-/*!40000 ALTER TABLE `estados` DISABLE KEYS */;
-/*!40000 ALTER TABLE `estados` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `pessoas`
@@ -78,17 +60,23 @@ CREATE TABLE `pessoas` (
   `Cpf` varchar(14) NOT NULL,
   `DataNascimento` date NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `pessoas`
+-- Table structure for table `treinamentos`
 --
 
-LOCK TABLES `pessoas` WRITE;
-/*!40000 ALTER TABLE `pessoas` DISABLE KEYS */;
-/*!40000 ALTER TABLE `pessoas` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `treinamentos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `treinamentos` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Nome` varchar(200) NOT NULL,
+  `CargaHoraria` decimal(10,1) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -99,4 +87,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-01 21:36:47
+-- Dump completed on 2022-04-02 12:20:22
