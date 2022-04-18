@@ -6,6 +6,7 @@ namespace WebApplication.Repositorio
         IEstadoRepository EstadoRepository { get; }
         ICidadeRepository CidadeRepository { get; }
         IPessoaRepository PessoaRepository { get; }
+        ITreinamentoRepository TreinamentoRepository { get; }
         void Commit();
     }
 }

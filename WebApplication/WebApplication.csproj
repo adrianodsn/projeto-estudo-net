@@ -91,6 +91,8 @@
     <Content Include="cidade.aspx" />
     <Content Include="estados.aspx" />
     <Content Include="estado.aspx" />
+    <Content Include="treinamento.aspx" />
+    <Content Include="treinamentos.aspx" />
     <Content Include="pessoas.aspx" />
     <Content Include="pessoa.aspx" />
     <Content Include="Global.asax" />
@@ -125,6 +127,7 @@
     <Compile Include="cidade.aspx.designer.cs">
       <DependentUpon>cidade.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Treinamento.cs" />
     <Compile Include="estados.aspx.cs">
       <DependentUpon>estados.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -139,12 +142,27 @@
     <Compile Include="estado.aspx.designer.cs">
       <DependentUpon>estado.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Infra\Mapping\TreinamentoMap.cs" />
     <Compile Include="PaginaBase.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Entities\Cidade.cs" />
     <Compile Include="Entities\Pessoa.cs" />
     <Compile Include="Entities\Estado.cs" />
+    <Compile Include="treinamento.aspx.cs">
+      <DependentUpon>treinamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="treinamento.aspx.designer.cs">
+      <DependentUpon>treinamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="treinamentos.aspx.cs">
+      <DependentUpon>treinamentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="treinamentos.aspx.designer.cs">
+      <DependentUpon>treinamentos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pessoas.aspx.cs">
       <DependentUpon>pessoas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -160,6 +178,8 @@
       <DependentUpon>pessoa.aspx</DependentUpon>
     </Compile>
     <Compile Include="Repositorio\CidadeRepository.cs" />
+    <Compile Include="Repositorio\ITreinamentoRepository.cs" />
+    <Compile Include="Repositorio\TreinamentoRepository.cs" />
     <Compile Include="Repositorio\PessoaRepository.cs" />
     <Compile Include="Repositorio\EstadoRepository.cs" />
     <Compile Include="Repositorio\IPessoaRepository.cs" />

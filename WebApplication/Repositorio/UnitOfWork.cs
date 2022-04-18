@@ -10,6 +10,7 @@ namespace WebApplication.Repositorio
         private EstadoRepository _EstadoRepository = null;
         private CidadeRepository _CidadeRepository = null;
         private PessoaRepository _PessoaRepository = null;
+        private TreinamentoRepository _TreinamentoRepository = null;
 
         public UnitOfWork()
         {
@@ -57,6 +58,19 @@ namespace WebApplication.Repositorio
                 }
 
                 return _PessoaRepository;
+            }
+        }
+
+        public ITreinamentoRepository TreinamentoRepository
+        {
+            get
+            {
+                if (_TreinamentoRepository == null)
+                {
+                    _TreinamentoRepository = new TreinamentoRepository(Context);
+                }
+
+                return _TreinamentoRepository;
             }
         }
 

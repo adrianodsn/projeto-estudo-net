@@ -15,6 +15,7 @@ namespace WebApplication.Infra.Context
         public virtual DbSet<Cidade> Cidades { get; set; }
         public virtual DbSet<Estado> Estados { get; set; }
         public virtual DbSet<Pessoa> Pessoas { get; set; }
+        public virtual DbSet<Treinamento> Treinamentos { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

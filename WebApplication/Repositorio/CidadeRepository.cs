@@ -15,16 +15,16 @@ namespace WebApplication.Repositorio
             Context = context;
         }
 
-        public List<Cidade> BuscarCidadesPorNomeEEstado(string q, int estadoId)
+        public List<Cidade> BuscarCidadesPorNomeEEstado(string termo, int estadoId)
         {
             IQueryable<Cidade> cidades = Context.Cidades
-            .Include(x => x.Estado)
-            .AsNoTracking()
-            .OrderBy(x => x.Nome);
+                .Include(x => x.Estado)
+                .AsNoTracking()
+                .OrderBy(x => x.Nome);
 
-            if (!string.IsNullOrEmpty(q))
+            if (!string.IsNullOrEmpty(termo))
             {
-                cidades = cidades.Where(x => x.Nome.Contains(q));
+                cidades = cidades.Where(x => x.Nome.Contains(termo));
             }
 
             if (!estadoId.Equals(0))
